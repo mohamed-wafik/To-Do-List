@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>📝 My Todo List</h1>
+        <div class="num-tasks">
+          <span class="count-done">0</span>/<span class="total-task">0</span>
+        </div>
+      </div>
+      <form class="input-div">
+        <input
+          class="message"
+          type="text"
+          name="message"
+          placeholder="Write your task..."
+          id=""
+        />
+        <button class="btn submit">Add To list</button>
+      </form>
+      <div class="display-list"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

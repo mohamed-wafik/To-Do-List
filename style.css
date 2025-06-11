@@ -1,0 +1,196 @@
+/* Reset and base */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to right, #4f46e5, #6366f1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+    color: #333;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15);
+    padding: 15px 20px;
+    width: 550px;;
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+h1 {
+    flex: 1;
+    font-size: 28px;
+    color: #2c3e50;
+}
+.num-tasks {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.1);
+}
+.input-div {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06); 
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+.input-div input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border 0.3s ease;
+}
+.input-div input:focus {
+    border-color: #4f46e5;
+    outline: none;
+}
+.btn {
+    background-color: #4f46e5;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #4338ca;
+}
+.btn i {
+    pointer-events: none;
+}
+.display-list {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.display-list .box {
+    background-color: #ffffff;
+    padding: 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.display-list .box p {
+    margin: 0;
+    font-size: 16px;
+    color: #374151;
+}
+.display-list .box.check p {
+    text-decoration: line-through;
+    color: #7b7b7b;
+}
+.display-list .delete ,
+.display-list .done {
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+.display-list .delete {
+    background-color: #ef4444;
+}
+.display-list .delete:hover {
+    background-color: #dc2626;
+}
+.display-list .box.check .done {
+    opacity: .5;
+    pointer-events: none;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    backdrop-filter: blur(2px);
+}
+.finish-task {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background-color: #FFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    z-index: 1200;
+}
+.finish-task span {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: green;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+.finish-task span i {
+    font-size: 40px;
+    line-height: 80px;
+
+}
+.finish-task h1 {
+    text-transform: capitalize;
+}
+@media (max-width: 600px) {
+    .finish-task ,
+    .container {
+        width: 100%;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    .num-tasks {
+        width: 80px;
+        height: 80px;
+        font-size: 22px;
+    }
+    .display-list .box {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .input-div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .control {
+        display: flex;
+        gap: 10px;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+
