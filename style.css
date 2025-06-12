@@ -118,6 +118,12 @@ h1 {
 .display-list .delete:hover {
     background-color: #dc2626;
 }
+.display-list .done {
+    background-color: green;
+}
+.display-list .done:hover {
+    background-color: #0fad0f;
+}
 .display-list .box.check .done {
     opacity: .5;
     pointer-events: none;
