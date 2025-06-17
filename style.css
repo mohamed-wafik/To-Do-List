@@ -171,7 +171,9 @@ h1 {
     text-transform: capitalize;
 }
 @media (max-width: 600px) {
-    .finish-task ,
+    .finish-task {
+        width: 90%;
+    }
     .container {
         width: 100%;
     }
