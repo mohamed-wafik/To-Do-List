@@ -81,19 +81,19 @@ function getToList() {
           <div class="box ${check}">
             <p>${element.message}</p>
             <div class="control">
-            <button class="btn done" data-id="${element.id}">
-              <i class="fa-solid fa-check"></i>
-            </button>
-            <button class="btn delete" data-id="${element.id}">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
+              <button class="btn done" data-id="${element.id}">
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <button class="btn delete" data-id="${element.id}">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
             </div>
           </div>
     `;
   });
   totalTask.innerHTML = tolist.length;
   countDone.innerHTML = count;
-  if (tolist.length === count) {
+  if (tolist.length === count && tolist.length !== 0) {
     displayAlert();
     handleRomveAlert();
   }
